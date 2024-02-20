@@ -1,3 +1,4 @@
+/* Paleta de colores escogida */
 :root {
   --main-color: #402D29;
   --secondary-color: #D9985F;
@@ -5,13 +6,15 @@
   --text-color: #fff;
 }
 
+/* Selector universal, antes y después a todos los elementos HTML
+contarles los bordes para los cálculos de ancho y alto */ 
+*,
 ::after,
 ::before {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+/* Elemento cuerpo sin márgenes, relleno, definición de fuente y color de fondo */
 body {
   margin: 0;
   padding: 0;
@@ -23,14 +26,21 @@ body {
   background-color: var(--main-color);
 }
 
+/* Elemento párrafo justificado */
 p {
   text-align: justify;
 }
 
+/* Elemento imagen con un máximo de ancho */
 img {
   max-width: 250px;
 }
 
+/* Clase header con un display (visualización) flexible, con espacio entre los elementos
+en el eje x, alineados al centro en eje y, espaciado de 1 unidad relativa (rem es relativo 
+al tamaño de fuente del elemento raiz html que es 16 px en este caso) arriba y abajo y dos
+ en izquierda y derecha, con una altura de 180px para cubrir la cabeza de gato de esa altura
+ más el espaciado.*/
 .header {
   display: flex;
   justify-content: space-between;
@@ -39,6 +49,9 @@ img {
   height: 180px;
 }
 
+/* Clase header content que tiene titulo y navbar flexible y alineada en y al centro, color
+de texto con el color secundario de la paleta de colores, espacio en 1 arriba abajo 2 izquierda
+derecha. */
 .header-content {
   display: flex;
   align-items: center;
@@ -46,6 +59,11 @@ img {
   padding: 1rem 2rem;
 }
 
+/* Clase cabeza de gato, ancho y largo definidos con posición absoluta en el documento, 
+esto indica que se acomoda con respecto al elemento html y con top left acomodamos su 
+posición en la ventana. Tiene de fondo un gradiente de dos colores, el primer color empieza
+a cambair en el 85% hasta llegar a ser el segundo color en el 100%.
+Tienen un borde de un pixel continuo de un color oscuro y los bordes se redondean. */
 .cat-head {
   width: 205px;
   height: 180px;
@@ -53,12 +71,15 @@ img {
   top: 20px; 
   left: 20px;
   background: linear-gradient(#5e5e5e 85%, #45454f 100%);
-  width: 205px;
-  height: 180px;
   border: 1px solid #45454f;
   border-radius: 46%;
 }
 
+/* Clase oreja izquierda, posición abosulta ahora con respecto a su padre la cabeza de gato.
+Posición top hacia arriba (negativo) y left hacia izquierda (negativo) para acomodarla, 
+z-index para que esté por encima de otros elementos, bordes redondeados y un borde de 35px
+ de ancho con un color transparente para que no se vea rotado 45 grados en sentido contrario
+a los relojes y un borde de 70px de ancho con el color de la cabeza de gato. */
 .cat-left-ear {
   position: absolute;
   top: -26px;
@@ -85,6 +106,9 @@ img {
   border-bottom: 70px solid #5e5e5e;
 }
 
+/* Clase oreja interna izquierda, posición absoluta con respecto a su padre la oreja izquierda
+y con top y left para acomodarla, bordes redondeados y un borde de 20px de ancho con un color
+transparente para que no se vea y un borde de 40px de ancho con el color de la cabeza de gato. */
 .cat-left-inner-ear {
   position: absolute;
   top: 22px;
@@ -111,6 +135,8 @@ img {
   border-bottom: 40px solid #3b3b4f;
 }
 
+/* Clase ojo izquierdo, posición absoluta con respecto a su padre la cabeza de gato y con top
+y left para acomodarla, bordes redondeados y un ancho y alto definidos, color de fondo negro. */
 .cat-left-eye {
   position: absolute;
   top: 54px;
@@ -133,6 +159,8 @@ img {
   background-color: #000;
 }
 
+/* Clase ojo interno izquierdo, posición absoluta con respecto a su padre el ojo izquierdo y con top
+y left para acomodarla, bordes redondeados y un ancho y alto definidos, color de fondo blanco. */
 .cat-left-inner-eye {
   position: absolute;
   top: 8px;
@@ -155,6 +183,7 @@ img {
   border-radius: 60%;
 }
 
+/* Clase nariz, posición absoluta con respecto a la cabeza de gato, bordeada, rotada y acomodada. */
 .cat-nose {
   position: absolute;
   top: 108px;
@@ -168,6 +197,8 @@ img {
   border-bottom: 20px solid #442c2c;
 }
 
+/* Selector de elemento div en la clase boca de gato, ancho y alto definidos, bordeada y 
+redondeada para la formación de una sonrisa */
 .cat-mouth div {
   width: 30px;
   height: 50px;
@@ -176,6 +207,7 @@ img {
   border-color: black transparent transparent transparent;
 }
 
+/* Clase línea de boca izquierda, posición absoluta con respecto a la boca de gato, rotada y acomodada. */
 .cat-mouth-line-left {
   position: absolute;
   top: 88px;
@@ -190,6 +222,7 @@ img {
   transform: rotate(165deg);
 }
 
+/* Selector de elemento div en la clase bigote de gato izquierdo color, ancho y largo definido. */
 .cat-whiskers-left div {
   width: 40px;
   height: 1px;
@@ -202,6 +235,8 @@ img {
   background-color: #000;
 }
 
+/* Clase bigote izquierdo superior, posición absoluta con respecto a los bigotes,
+ rotada y acomodada. */
 .cat-whisker-left-top {
   position: absolute;
   top: 120px;
@@ -244,11 +279,15 @@ img {
   transform: rotate(3deg);
 }
 
+/* Clase contenido de título de cabecera, tamaño de fuente y margen izquierdo para no 
+chocar con la cabeza de gato. */
 .header-content-title {
   font-size: 2rem;
   margin-left: 240px;
 }
 
+/* Clase de navegación de cabecera, flexible, con espacio entre elementos, alineados al 
+centro en y ocupando el 50% del header-content */
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -256,6 +295,8 @@ img {
   width: 50%;
 }
 
+/* Clase de lista de navegación de cabecera, sin puntos de lista y con espacio entre 
+elementos de la lista */
 .header-nav-list {
   display: flex;
   justify-content: space-between;
@@ -264,12 +305,15 @@ img {
   gap: 1rem;
 }
 
+/* Clase de enlace de lista de navegación de cabecera, subrayado y color secundario de la
+paleta de colores */
 .header-nav-list-item-link {
   text-decoration: underline;
-  font-size: 1.5rem;
   color: var(--secondary-color);
 }
 
+/* Clase de contenido principal, flexible, alineados en x y y al inicio, con espacio entre
+elementos y relleno de 0 arriba y abajo y 2 izquierda y derecha */
 .main {
   display: flex;
   justify-content: start;
@@ -278,6 +322,9 @@ img {
   padding: 0rem 2rem;
 }
 
+/* Clase de contenido principal 80, flexible, dirección de columnas alineados en x y y al 
+inicio, con espacio entre elementos y relleno de 0 arriba y abajo y 2 izquierda y derecha
+ y con un ancho del 80% */
 .main-content-80 {
   display: flex;
   flex-direction: column;
@@ -285,21 +332,26 @@ img {
   width: 80%;
 }
 
+/* Clase de contenido principal, flexible, dirección de columna, espacio entre elementos */
 .main-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* Clase de contenido principal subtítulo, tamaño de fuente al doble
+ y color secundario de la paleta de colores */
 .main-content-subtitle {
   font-size: 2rem;
   color: var(--secondary-color);
 }
 
+/* Clase de contenido principal popularidad, flexible */
 .main-content-popularity {
   display: flex;
 }
 
+/* Clase de contenido principal subcontenido de popularidad, flexible, dirección de columna */
 .main-content-popularity-subcontent {
   display: flex;
   flex-direction: column;
@@ -323,6 +375,7 @@ img {
   flex-direction: column;
 }
 
+/* Clase de contenido principal estadisticas, flexible y con espacio entre elementos */
 .main-content-stats {
   display: flex;
   gap: 1rem;
@@ -333,6 +386,9 @@ img {
   flex-direction: column;
 }
 
+/* Clase de barra de navegación en contenido principal, posición fija en el navegador
+a la mitad de su padre el main y muy a la derecha para cumplir con el 80%, 
+trasladado arriba y a la izquierda, con un color de fondo y espaciado entre elementos  */
 .main-nav {
   position: fixed;
   top: 50%;
@@ -342,6 +398,8 @@ img {
   padding: 1rem;
 }
 
+/* Clase de lista de navegación en contenido principal, flexible, dirección de columna,
+color de texto, lista tipo romana y espacio entre elementos */
 .main-nav-list {
   display: flex;
   flex-direction: column;
@@ -350,11 +408,15 @@ img {
   gap: 1rem;
 }
 
+/* Clase de enlace de lista de navegación en contenido principal, sin subrayado y color
+principal de la paleta de colores */
 .main-nav-list-item-link {
   text-decoration: none;
   color: var(--main-color);
 }
 
+/* Clase de ie de página, flexible, alineados en x y y al centro, con color de texto y 
+relleno de 0 arriba y abajo y 1 izquierda y derecha */
 .footer {
   display: flex;
   justify-content: center;
@@ -363,6 +425,8 @@ img {
   padding: 0rem 1rem;
 }
 
+/* Clase de contenido principal mundo imagen, flexible, alineados en x y y al centro, con
+relleno  */
 .main-content-world-img {
   display: flex;
   justify-content: center;
@@ -370,16 +434,22 @@ img {
   padding: 0rem 1rem;
 }
 
+/* Selector de imagen en clase de contenido principal mundo imagen, con un ancho máximo y
+altura automática */
 .main-content-world-img img {
   max-width: 100% !important;
   height: auto;
 }
 
+/* Clase de contenido principal subtítulo subtítulo, tamaño de fuente y color secundario de
+la paleta de colores */
 .main-content-subtitle-subtitle {
   font-size: 1.5rem;
   color: var(--tertiary-color);
 }
 
+/* Clase de contenido principal actividades video, flexible, alineados en x y y al centro, con
+relleno  */
 .main-content-activities-video {
   display: flex;
   justify-content: center;
@@ -387,33 +457,42 @@ img {
   padding: 0rem 1rem;
 }
 
+/* Selector de tabla en clase de contenido principal tabla, con un ancho al máximo y
+colapso de bordes, combinación de bordes de la tabla */
 .main-content-table table {
   width: 100%;
   border-collapse: collapse;
 }
 
+/* Selector de encabezado de tabla en clase de contenido principal tabla con color de fondo, texto
+y relleno */
 .main-content-table th {
   background-color: var(--tertiary-color);
   color: var(--main-color);
   padding: 0.5rem;
 }
 
+/* Selector de celda de tabla en clase de contenido principal tabla con color de fondo, texto
+y relleno */
 .main-content-table td {
   background-color: var(--secondary-color);
   color: var(--main-color);
   padding: 0.5rem;
 }
 
+/* Selector de encabezado y celda de tabla en clase de contenido principal tabla con borde */
 .main-content-table th,
 .main-content-table td {
   border: 1px solid var(--main-color);
 }
 
+/* Selector de encabezado y celda de tabla en clase de contenido principal tabla con texto alineado */
 .main-content-table th,
 .main-content-table td {
   text-align: center;
 }
 
+/* Clase de contenido principal enlace texto, sin decoración y de color */
 .main-content-text-link {
   text-decoration: underline;
   color: var(--text-color);
