@@ -52,19 +52,33 @@
         </div>
         <h1 class="header-content-title">Cat.io - Introducción</h1>
       </div>
+      <!-- Menú móvil con icono de gato -->
+      <input type="checkbox" class="menu-mobile" id="menu-mobile">
+      <label for="menu-mobile" class="menu-mobile-icon">
+        <img src="../assets/img/cat.svg" alt="Icono menú">
+      </label>
       <!-- Barra de navegación a las 6 páginas -->
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <li class="header-nav-list-item"><a href="index.html" class="header-nav-list-item-link" target="_self">Introducción</a></li>
-          <li class="header-nav-list-item"><a href="ubicacion.html" class="header-nav-list-item-link" target="_self">Ubicación</a></li>
-          <li class="header-nav-list-item"><a href="personajes.html" class="header-nav-list-item-link" target="_self">Personajes</a></li>
-          <li class="header-nav-list-item"><a href="actividades.html" class="header-nav-list-item-link" target="_self">Actividades</a></li>
-          <li class="header-nav-list-item"><a href="historia.html" class="header-nav-list-item-link" target="_self">Historia</a></li>
-          <li class="header-nav-list-item"><a href="creditos.html" class="header-nav-list-item-link" target="_self">Créditos</a></li>
+      <nav class="header-menu">
+        <ul class="header-menu-list">
+          <li class="header-menu-list-item"><a href="index.html" class="header-menu-list-item-link" target="_self">Introducción</a></li>
+          <li class="header-menu-list-item"><a href="ubicacion.html" class="header-menu-list-item-link" target="_self">Ubicación</a></li>
+          <li class="header-menu-list-item"><a href="personajes.html" class="header-menu-list-item-link" target="_self">Personajes</a></li>
+          <li class="header-menu-list-item"><a href="actividades.html" class="header-menu-list-item-link" target="_self">Actividades</a></li>
+          <li class="header-menu-list-item"><a href="historia.html" class="header-menu-list-item-link" target="_self">Historia</a></li>
+          <li class="header-menu-list-item"><a href="creditos.html" class="header-menu-list-item-link" target="_self">Créditos</a></li>
         </ul>
       </nav>
     </header>
     <main class="main">
+      <!-- Navegación auxiliar para los contenidos de la página con su identificador, ubicada en el 20% restante de vista -->
+      <div class="main-submenu">
+        <ul class="main-submenu-list">
+          <li class="main-submenu-list-item"><a href="#popularity" class="main-submenu-list-item-link" target="_self">Popularidad.</a></li>
+          <li class="main-submenu-list-item"><a href="#interest" class="main-submenu-list-item-link" target="_self">Interés.</a></li>
+          <li class="main-submenu-list-item"><a href="#importance" class="main-submenu-list-item-link" target="_self">Importancia.</a></li>
+          <li class="main-submenu-list-item"><a href="#stats" class="main-submenu-list-item-link" target="_self">Estadísticas.</a></li>
+        </ul>
+      </div>
       <!-- Contenido ajustado al 80% -->
       <div class="main-content-80">
         <!-- Múltiples secciones de contenido con identificador para navegación, contienen subtítulo, imagen y párrafos -->
@@ -143,19 +157,10 @@
           </div>
         </section>
       </div>
-      <!-- Navegación auxiliar para los contenidos de la página con su identificador, ubicada en el 20% restante de vista -->
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li class="main-nav-list-item"><a href="#popularity" class="main-nav-list-item-link" target="_self">Popularidad.</a></li>
-          <li class="main-nav-list-item"><a href="#interest" class="main-nav-list-item-link" target="_self">Interés.</a></li>
-          <li class="main-nav-list-item"><a href="#importance" class="main-nav-list-item-link" target="_self">Importancia.</a></li>
-          <li class="main-nav-list-item"><a href="#stats" class="main-nav-list-item-link" target="_self">Estadísticas.</a></li>
-        </ul>
-      </nav>
     </main>
       <!-- Pie de página con información de Copyright -->
     <footer class="footer">
       <p class="footer-text">&copy; 2024 Felipe Rojas</p>
-    </footer>
+    </footer>  
   </body>
 </html>

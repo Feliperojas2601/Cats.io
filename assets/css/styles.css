@@ -56,8 +56,16 @@ derecha. */
   display: flex;
   align-items: center;
   color: var(--secondary-color);
-  padding: 1rem 2rem;
+  padding: 0;
 }
+
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile-icon {
+  display: none;
+} 
 
 /* Clase cabeza de gato, ancho y largo definidos con posición absoluta en el documento, 
 esto indica que se acomoda con respecto al elemento html y con top left acomodamos su 
@@ -288,7 +296,7 @@ chocar con la cabeza de gato. */
 
 /* Clase de navegación de cabecera, flexible, con espacio entre elementos, alineados al 
 centro en y ocupando el 50% del header-content */
-.header-nav {
+.header-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,7 +305,7 @@ centro en y ocupando el 50% del header-content */
 
 /* Clase de lista de navegación de cabecera, sin puntos de lista y con espacio entre 
 elementos de la lista */
-.header-nav-list {
+.header-menu-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,7 +315,7 @@ elementos de la lista */
 
 /* Clase de enlace de lista de navegación de cabecera, subrayado y color secundario de la
 paleta de colores */
-.header-nav-list-item-link {
+.header-menu-list-item-link {
   text-decoration: underline;
   color: var(--secondary-color);
 }
@@ -389,7 +397,7 @@ inicio, con espacio entre elementos y relleno de 0 arriba y abajo y 2 izquierda 
 /* Clase de barra de navegación en contenido principal, posición fija en el navegador
 a la mitad de su padre el main y muy a la derecha para cumplir con el 80%, 
 trasladado arriba y a la izquierda, con un color de fondo y espaciado entre elementos  */
-.main-nav {
+.main-submenu {
   position: fixed;
   top: 50%;
   left: 92%;
@@ -400,7 +408,7 @@ trasladado arriba y a la izquierda, con un color de fondo y espaciado entre elem
 
 /* Clase de lista de navegación en contenido principal, flexible, dirección de columna,
 color de texto, lista tipo romana y espacio entre elementos */
-.main-nav-list {
+.main-submenu-list {
   display: flex;
   flex-direction: column;
   color: var(--main-color);
@@ -410,7 +418,7 @@ color de texto, lista tipo romana y espacio entre elementos */
 
 /* Clase de enlace de lista de navegación en contenido principal, sin subrayado y color
 principal de la paleta de colores */
-.main-nav-list-item-link {
+.main-submenu-list-item-link {
   text-decoration: none;
   color: var(--main-color);
 }
@@ -496,4 +504,523 @@ y relleno */
 .main-content-text-link {
   text-decoration: underline;
   color: var(--text-color);
+}
+
+/* Medidas del iframe video */ 
+.iframe-video {
+  width: 560px;
+  height: 315px;
+}
+
+/* Diseño para tablet 800 - 1200 */
+@media (min-width: 800px) and (max-width: 1200px) {
+
+  /* Proporción de cabeza de gato 0.75 */
+  :root{
+    --cat-head-proportion: 0.75;
+  }
+
+  /* Hacer las imagenes más grandes */
+  img {
+    max-width: calc(250px / var(--cat-head-proportion));
+  }
+  
+  /* Modificar el alto y el padding de la cabecera */
+  .header {
+    padding: calc(1rem * var(--cat-head-proportion)) calc(2rem * var(--cat-head-proportion));
+    height: calc(180px * var(--cat-head-proportion));
+  }
+
+  /* Clase cabeza de gato con una proporción de var(--cat-head-proportion) para reducir su tamaño */
+  .cat-head {
+    width: calc(205px * var(--cat-head-proportion));
+    height: calc(180px * var(--cat-head-proportion));
+    top: calc(20px * var(--cat-head-proportion)); 
+    left: calc(20px * var(--cat-head-proportion));
+  }
+  
+  .cat-left-ear {
+    top: calc(-26px * var(--cat-head-proportion));
+    left: calc(-31px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(70px * var(--cat-head-proportion)) solid #5e5e5e;
+  }
+  
+  .cat-right-ear {
+    top: calc(-26px * var(--cat-head-proportion));
+    left: calc(163px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(70px * var(--cat-head-proportion)) solid #5e5e5e;
+  }
+  
+  .cat-left-inner-ear {
+    top: calc(22px * var(--cat-head-proportion));
+    left: calc(-20px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(40px * var(--cat-head-proportion)) solid #3b3b4f;
+  }
+  
+  .cat-right-inner-ear {
+    top: calc(22px * var(--cat-head-proportion));
+    left: calc(-20px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(40px * var(--cat-head-proportion)) solid #3b3b4f;
+  }
+  
+  .cat-left-eye {
+    top: calc(54px * var(--cat-head-proportion));
+    left: calc(39px * var(--cat-head-proportion));
+    width: calc(30px * var(--cat-head-proportion));
+    height: calc(40px * var(--cat-head-proportion));
+  }
+  
+  .cat-right-eye {
+    top: calc(54px * var(--cat-head-proportion));
+    left: calc(134px * var(--cat-head-proportion));
+    width: calc(30px * var(--cat-head-proportion));
+    height: calc(40px * var(--cat-head-proportion));
+  }
+  
+  .cat-left-inner-eye {
+    top: calc(8px * var(--cat-head-proportion));
+    left: calc(2px * var(--cat-head-proportion));
+    width: calc(10px * var(--cat-head-proportion));
+    height: calc(20px * var(--cat-head-proportion));
+  }
+  
+  .cat-right-inner-eye {
+    top: calc(8px * var(--cat-head-proportion));
+    left: calc(18px * var(--cat-head-proportion));
+    width: calc(10px * var(--cat-head-proportion));
+    height: calc(20px * var(--cat-head-proportion));
+  }
+  
+  .cat-nose {
+    top: calc(108px * var(--cat-head-proportion));
+    left: calc(85px * var(--cat-head-proportion));
+    border-left: calc(15px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(15px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(20px * var(--cat-head-proportion)) solid #442c2c;
+  }
+  
+  .cat-mouth div {
+    width: calc(30px * var(--cat-head-proportion));
+    height: calc(50px * var(--cat-head-proportion));
+    border: calc(2px * var(--cat-head-proportion)) solid #000;
+    border-radius: calc(190% * var(--cat-head-proportion))/calc(190px * var(--cat-head-proportion)) calc(150px * var(--cat-head-proportion)) 0 0;
+  }
+  
+  .cat-mouth-line-left {
+    top: calc(88px * var(--cat-head-proportion));
+    left: calc(74px * var(--cat-head-proportion));
+  }
+  
+  .cat-mouth-line-right {
+    top: calc(88px * var(--cat-head-proportion));
+    left: calc(91px * var(--cat-head-proportion));
+  }
+  
+  .cat-whiskers-left div {
+    width: calc(40px * var(--cat-head-proportion));
+    height: calc(1px * var(--cat-head-proportion));
+  }
+  
+  .cat-whiskers-right div {
+    width: calc(40px * var(--cat-head-proportion));
+    height: calc(1px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-left-top {
+    top: calc(120px * var(--cat-head-proportion));
+    left: calc(52px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-left-middle {
+    top: calc(127px * var(--cat-head-proportion));
+    left: calc(52px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-left-bottom {
+    top: calc(134px * var(--cat-head-proportion));
+    left: calc(52px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-right-top {
+    top: calc(120px * var(--cat-head-proportion));
+    left: calc(109px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-right-middle {
+    top: calc(127px * var(--cat-head-proportion));
+    left: calc(109px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-right-bottom {
+    top: calc(134px * var(--cat-head-proportion));
+    left: calc(109px * var(--cat-head-proportion));
+  }
+
+  /* Hacer el titulo del header más grande*/
+  .header-content-title {
+    font-size: 2.75rem;
+    margin-left: calc(240px * var(--cat-head-proportion));
+  }
+
+
+  /* Mostrar el icono para el menú de navegación */
+  .menu-mobile-icon {
+    display: flex; 
+    width: 100px;
+    height: 100px;    
+  }
+
+  /* Puntero cuando se esté encima del icono */
+  .menu-mobile-icon:hover {
+    cursor: pointer;
+  }
+
+  /* Menú de navegación con un color de contraste, posición fija, ancho del 70%
+   y altura del 100%, inicia desde la esquina superior izquierda, oculto a la izquierda 
+   con margen, se desplaza hacia la izquierda con una transición de 1s y se sobrepone */
+  .header-menu {
+    background-color: var(--tertiary-color);
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    margin-left: -80%;
+    transition: all 1s;
+    z-index: 2;
+  } 
+
+  /* Lista de elementos del menú con dirección de columna */
+  .header-menu-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  } 
+
+  /* Items con una caja de contraste, 80% de ancho la lista, espaciado de 1rem, 
+  colores de borde para dar un efecto sombra */
+  .header-menu-list-item {
+    background-color: var(--main-color);
+    width: 80%;
+    padding: 1rem;
+    border-bottom: 3px solid #000000; 
+    border-right: 3px solid #000000; 
+  }
+
+  /* Traer el menú de la derecha y acomodar -2rem según el padding del header */
+  .menu-mobile:checked ~ .header-menu {
+    margin-left: -2rem;
+  }
+
+  /* Sección principal de bloque para tener fila de submenu y fila de contenido */
+  .main {
+    display: block;
+  }
+
+  /* Fila de submenu, posicion estatica, sin transformación */
+  .main-submenu {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  /* Lista de submenu con dirección de fila y espaciado */
+  .main-submenu-list {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  /* Contenido principal ocupando el 100% del ancho */
+  .main-content-80 {
+    width: 100%;
+  }
+
+  /* Imagenes de la tabla más pequeñas */ 
+  .table-img {
+    max-width: 240px;
+  }
+}
+
+/* Diseño para móvil 800 - 1200 */
+@media (max-width: 799px) {
+
+  /* Proporción de cabeza de gato 0.5 */
+  :root{
+    --cat-head-proportion: 0.5;
+  }
+
+  /* Hacer las imagenes más grandes */
+  img {
+    max-width: 100%;
+    max-height: auto;
+  }
+  
+  /* Modificar el alto y el padding de la cabecera */
+  .header {
+    padding: calc(1rem * var(--cat-head-proportion)) calc(2rem * var(--cat-head-proportion));
+    height: calc(180px * var(--cat-head-proportion));
+  }
+
+  /* Clase cabeza de gato con una proporción de var(--cat-head-proportion) para reducir su tamaño */
+  .cat-head {
+    width: calc(205px * var(--cat-head-proportion));
+    height: calc(180px * var(--cat-head-proportion));
+    top: calc(20px * var(--cat-head-proportion)); 
+    left: calc(20px * var(--cat-head-proportion));
+  }
+  
+  .cat-left-ear {
+    top: calc(-26px * var(--cat-head-proportion));
+    left: calc(-31px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(70px * var(--cat-head-proportion)) solid #5e5e5e;
+  }
+  
+  .cat-right-ear {
+    top: calc(-26px * var(--cat-head-proportion));
+    left: calc(163px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(35px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(70px * var(--cat-head-proportion)) solid #5e5e5e;
+  }
+  
+  .cat-left-inner-ear {
+    top: calc(22px * var(--cat-head-proportion));
+    left: calc(-20px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(40px * var(--cat-head-proportion)) solid #3b3b4f;
+  }
+  
+  .cat-right-inner-ear {
+    top: calc(22px * var(--cat-head-proportion));
+    left: calc(-20px * var(--cat-head-proportion));
+    border-top-left-radius: calc(90px * var(--cat-head-proportion));
+    border-top-right-radius: calc(10px * var(--cat-head-proportion));
+    border-left: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(20px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(40px * var(--cat-head-proportion)) solid #3b3b4f;
+  }
+  
+  .cat-left-eye {
+    top: calc(54px * var(--cat-head-proportion));
+    left: calc(39px * var(--cat-head-proportion));
+    width: calc(30px * var(--cat-head-proportion));
+    height: calc(40px * var(--cat-head-proportion));
+  }
+  
+  .cat-right-eye {
+    top: calc(54px * var(--cat-head-proportion));
+    left: calc(134px * var(--cat-head-proportion));
+    width: calc(30px * var(--cat-head-proportion));
+    height: calc(40px * var(--cat-head-proportion));
+  }
+  
+  .cat-left-inner-eye {
+    top: calc(8px * var(--cat-head-proportion));
+    left: calc(2px * var(--cat-head-proportion));
+    width: calc(10px * var(--cat-head-proportion));
+    height: calc(20px * var(--cat-head-proportion));
+  }
+  
+  .cat-right-inner-eye {
+    top: calc(8px * var(--cat-head-proportion));
+    left: calc(18px * var(--cat-head-proportion));
+    width: calc(10px * var(--cat-head-proportion));
+    height: calc(20px * var(--cat-head-proportion));
+  }
+  
+  .cat-nose {
+    top: calc(108px * var(--cat-head-proportion));
+    left: calc(85px * var(--cat-head-proportion));
+    border-left: calc(15px * var(--cat-head-proportion)) solid transparent;
+    border-right: calc(15px * var(--cat-head-proportion)) solid transparent;
+    border-bottom: calc(20px * var(--cat-head-proportion)) solid #442c2c;
+  }
+  
+  .cat-mouth div {
+    width: calc(30px * var(--cat-head-proportion));
+    height: calc(50px * var(--cat-head-proportion));
+    border: calc(2px * var(--cat-head-proportion)) solid #000;
+    border-radius: calc(190% * var(--cat-head-proportion))/calc(190px * var(--cat-head-proportion)) calc(150px * var(--cat-head-proportion)) 0 0;
+  }
+  
+  .cat-mouth-line-left {
+    top: calc(88px * var(--cat-head-proportion));
+    left: calc(74px * var(--cat-head-proportion));
+  }
+  
+  .cat-mouth-line-right {
+    top: calc(88px * var(--cat-head-proportion));
+    left: calc(91px * var(--cat-head-proportion));
+  }
+  
+  .cat-whiskers-left div {
+    width: calc(40px * var(--cat-head-proportion));
+    height: calc(1px * var(--cat-head-proportion));
+  }
+  
+  .cat-whiskers-right div {
+    width: calc(40px * var(--cat-head-proportion));
+    height: calc(1px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-left-top {
+    top: calc(120px * var(--cat-head-proportion));
+    left: calc(52px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-left-middle {
+    top: calc(127px * var(--cat-head-proportion));
+    left: calc(52px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-left-bottom {
+    top: calc(134px * var(--cat-head-proportion));
+    left: calc(52px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-right-top {
+    top: calc(120px * var(--cat-head-proportion));
+    left: calc(109px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-right-middle {
+    top: calc(127px * var(--cat-head-proportion));
+    left: calc(109px * var(--cat-head-proportion));
+  }
+  
+  .cat-whisker-right-bottom {
+    top: calc(134px * var(--cat-head-proportion));
+    left: calc(109px * var(--cat-head-proportion));
+  }
+
+  /* Hacer el titulo del header más grande*/
+  .header-content-title {
+    font-size: 1.5rem;
+    margin-left: calc(240px * var(--cat-head-proportion));
+  }
+
+
+  /* Mostrar el icono para el menú de navegación */
+  .menu-mobile-icon {
+    display: flex; 
+    width: 70px;
+    height: 70px;    
+  }
+
+  /* Puntero cuando se esté encima del icono */
+  .menu-mobile-icon:hover {
+    cursor: pointer;
+  }
+
+  /* Menú de navegación con un color de contraste, posición fija, ancho del 70%
+   y altura del 100%, inicia desde la esquina superior izquierda, oculto a la izquierda 
+   con margen, se desplaza hacia la izquierda con una transición de 1s y se sobrepone */
+  .header-menu {
+    background-color: var(--tertiary-color);
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    margin-left: -80%;
+    transition: all 1s;
+    z-index: 2;
+  } 
+
+  /* Lista de elementos del menú con dirección de columna */
+  .header-menu-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+  } 
+
+  /* Items con una caja de contraste, 80% de ancho la lista, espaciado de 1rem, 
+  colores de borde para dar un efecto sombra */
+  .header-menu-list-item {
+    background-color: var(--main-color);
+    width: 80%;
+    padding: 1rem;
+    border-bottom: 3px solid #000000; 
+    border-right: 3px solid #000000; 
+  }
+
+  /* Traer el menú de la derecha y acomodar -2rem según el padding del header */
+  .menu-mobile:checked ~ .header-menu {
+    margin-left: -2rem;
+  }
+
+  /* Sección principal de bloque para tener fila de submenu y fila de contenido */
+  .main {
+    display: block;
+  }
+
+  /* Fila de submenu, posicion estatica, sin transformación */
+  .main-submenu {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+
+  /* Lista de submenu con dirección de fila y espaciado */
+  .main-submenu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Contenido principal ocupando el 100% del ancho */
+  .main-content-80 {
+    width: 100%;
+  }
+
+  /* Main content en bloque para tener imagen como una sola fila */
+  [class^="main-content-"] {
+    display: block;
+  }
+
+  /* Tabla desplazable sin agrandar el ancho de la web */
+  .main-content-table {
+    overflow-x: auto;
+  }
+
+  /* Imagenes de la tabla más pequeñas */ 
+  .table-img {
+    max-width: 150px;
+  }
+
+  /* Medidas del iframe video */
+  .iframe-video {
+    width: 275px;
+    height: 275px;
+  }
 }

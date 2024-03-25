@@ -12,6 +12,7 @@
   <body>
     <header class="header">
       <div class="header-content">
+        <!-- Gato construido con HTML -->
         <div class="cat-head">
           <div class="cat-ears">
             <div class="cat-left-ear">
@@ -49,14 +50,20 @@
         </div>
         <h1 class="header-content-title">Cat.io - Actividades</h1>
       </div>
-      <nav class="header-nav">
-        <ul class="header-nav-list">
-          <li class="header-nav-list-item"><a href="index.html" class="header-nav-list-item-link" target="_self">Introducción</a></li>
-          <li class="header-nav-list-item"><a href="ubicacion.html" class="header-nav-list-item-link" target="_self">Ubicación</a></li>
-          <li class="header-nav-list-item"><a href="personajes.html" class="header-nav-list-item-link" target="_self">Personajes</a></li>
-          <li class="header-nav-list-item"><a href="actividades.html" class="header-nav-list-item-link" target="_self">Actividades</a></li>
-          <li class="header-nav-list-item"><a href="historia.html" class="header-nav-list-item-link" target="_self">Historia</a></li>
-          <li class="header-nav-list-item"><a href="creditos.html" class="header-nav-list-item-link" target="_self">Créditos</a></li>
+      <!-- Menú móvil con icono de gato -->
+      <input type="checkbox" class="menu-mobile" id="menu-mobile">
+      <label for="menu-mobile" class="menu-mobile-icon">
+        <img src="../assets/img/cat.svg" alt="Icono menú">
+      </label>
+      <!-- Barra de navegación a las 6 páginas -->
+      <nav class="header-menu">
+        <ul class="header-menu-list">
+          <li class="header-menu-list-item"><a href="index.html" class="header-menu-list-item-link" target="_self">Introducción</a></li>
+          <li class="header-menu-list-item"><a href="ubicacion.html" class="header-menu-list-item-link" target="_self">Ubicación</a></li>
+          <li class="header-menu-list-item"><a href="personajes.html" class="header-menu-list-item-link" target="_self">Personajes</a></li>
+          <li class="header-menu-list-item"><a href="actividades.html" class="header-menu-list-item-link" target="_self">Actividades</a></li>
+          <li class="header-menu-list-item"><a href="historia.html" class="header-menu-list-item-link" target="_self">Historia</a></li>
+          <li class="header-menu-list-item"><a href="creditos.html" class="header-menu-list-item-link" target="_self">Créditos</a></li>
         </ul>
       </nav>
     </header>
@@ -67,10 +74,10 @@
           <h2 class="main-content-subtitle">Actividades cotidianas de los gatos.</h2>
           <p class="main-content-text">Los gatos son animales muy activos que realizan una gran variedad de actividades en su vida diaria.
             A continuación, se describen algunas de las actividades más comunes que los gatos realizan regularmente.</p>
-          <!-- <div class="main-content-activities-video">
-            Etiqueta iframe utilizada para insertar contenido de la web HTML dentro de este HTML
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/g8fbiFbT0X8?si=bjoFfkVQ6txbobiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div> -->
+          <div class="main-content-activities-video">
+            <!-- Etiqueta iframe utilizada para insertar contenido de la web HTML dentro de este HTML -->
+            <iframe class="iframe-video" src="https://www.youtube.com/embed/g8fbiFbT0X8?si=bjoFfkVQ6txbobiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
           <h3 class="main-content-subtitle-subtitle">Dormir.</h3>
           <p class="main-content-text">Los gatos son conocidos por su amor a la siesta. En promedio, un gato adulto pasa entre 12 y 16 horas
             al día durmiendo. Esta actividad es crucial para su salud y bienestar, ya que descansando pueden  
