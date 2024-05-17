@@ -512,6 +512,11 @@ y relleno */
   height: 315px;
 }
 
+/* Borde del mapa */
+#main-content-map {
+  box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
+}
+
 /* Diseño para tablet 800 - 1200 */
 @media (min-width: 800px) and (max-width: 1200px) {
 

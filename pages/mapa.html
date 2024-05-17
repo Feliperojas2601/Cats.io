@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <title>Cat.io - Mapa Interactivo</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <!-- Gato construido con HTML -->
+      <div class="cat-head">
+        <div class="cat-ears">
+          <div class="cat-left-ear">
+            <div class="cat-left-inner-ear"></div>
+          </div>
+          <div class="cat-right-ear">
+            <div class="cat-right-inner-ear"></div>
+          </div>
+        </div>
+        <div class="cat-eyes">
+          <div class="cat-left-eye">
+            <div class="cat-left-inner-eye"></div>
+          </div>
+          <div class="cat-right-eye">
+            <div class="cat-right-inner-eye"></div>
+          </div>
+        </div> 
+        <div class="cat-nose"></div>
+        <div class="cat-mouth">
+          <div class="cat-mouth-line-left"></div>
+          <div class="cat-mouth-line-right"></div>
+        </div>
+        <div class="cat-whiskers">
+          <div class="cat-whiskers-left">
+            <div class="cat-whisker-left-top"></div>
+            <div class="cat-whisker-left-middle"></div>
+            <div class="cat-whisker-left-bottom"></div>
+          </div>
+          <div class="cat-whiskers-right">
+            <div class="cat-whisker-right-top"></div>
+            <div class="cat-whisker-right-middle"></div>
+            <div class="cat-whisker-right-bottom"></div>
+          </div>
+        </div>
+      </div>
+      <h1 class="header-content-title">Cat.io - Introducción</h1>
+    </div>
+    <!-- Menú móvil con icono de gato -->
+    <input type="checkbox" class="menu-mobile" id="menu-mobile">
+    <label for="menu-mobile" class="menu-mobile-icon">
+      <img src="../assets/img/cat.svg" alt="Icono menú">
+    </label>
+    <!-- Barra de navegación a las 6 páginas -->
+    <nav class="header-menu">
+      <ul class="header-menu-list">
+        <li class="header-menu-list-item"><a href="index.html" class="header-menu-list-item-link" target="_self">Introducción</a></li>
+        <li class="header-menu-list-item"><a href="ubicacion.html" class="header-menu-list-item-link" target="_self">Ubicación</a></li>
+        <li class="header-menu-list-item"><a href="personajes.html" class="header-menu-list-item-link" target="_self">Personajes</a></li>
+        <li class="header-menu-list-item"><a href="actividades.html" class="header-menu-list-item-link" target="_self">Actividades</a></li>
+        <li class="header-menu-list-item"><a href="historia.html" class="header-menu-list-item-link" target="_self">Historia</a></li>
+        <li class="header-menu-list-item"><a href="creditos.html" class="header-menu-list-item-link" target="_self">Créditos</a></li>
+        <li class="header-menu-list-item"><a href="mapa.html" class="header-menu-list-item-link" target="_self">Mapa</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <section id="map">
+      <h2 class="main-content-subtitle">Mapa interactivo - Gatos por el mundo</h2>
+      <p class="main-content-text"> Navega por el mapa interactivo y explora las razas de gatos distribuidas por el mundo.</p>
+      <div id="main-content-map"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer-text">&copy; 2024 Felipe Rojas</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+  <script src="../assets/js/mapa.js"></script>
+</body>
+</html>
